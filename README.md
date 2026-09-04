@@ -31,3 +31,9 @@ forms, and WordPress media-library content cannot be fully reconstructed from th
 The theme assets and CSS have been copied into `public/`, and a Next.js App Router project has been
 created. For a pixel-perfect migration, the live WordPress site and/or WordPress export/database
 would be needed.
+
+## Netlify build fix
+
+FontAwesome font files are copied into `public/fonts/` and the migrated CSS uses
+root-relative `/fonts/...` URLs so Next.js can process the stylesheet without
+trying to resolve the old WordPress `../fonts/...` paths.
